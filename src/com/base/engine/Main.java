@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 
-package rpg;
+package com.base.engine;
 
+import com.base.game.Game;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
@@ -40,7 +41,8 @@ public class Main {
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
             glLoadIdentity();
             
-            
+            Game.update();
+            Game.render();
             
             Display.update();
             Display.sync(60);
